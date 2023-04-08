@@ -1,0 +1,33 @@
+doctype html
+html(lang="ru")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Pug lesson
+        link(rel="stylesheet", type="text/css", href="style.css")
+    body
+        h1 Lesson Page
+        .message
+            img.avatar(src="https://picsum.photos/64")
+            .info
+                .head
+                    a.name(href="google.com") Илья Медведев
+                    .time 09.04.2023
+                .content Люблю грозу в начале мая,<br> Когда всенний первый гром,<br> Как бы резвяся и играя,<br> Грохочет в небе голубом
+
+    - let a = '<strong>Жирный текст</strong>';
+    p!= 'Это число равно ' + a
+    p(title=a) Мой абзац!
+    - let b = 5
+    p.
+        Мой абзац! Мой абзац! Мой абзац!
+        Мой абзац! Мой абзац! Мой #{b+1} абзац!
+
+    - let friends = 10;
+
+    if (friends == 10)
+        p У тебя много друзей
+    else if (friends < 5)
+        p У тебя мало друзей
+        p У тебя
+
